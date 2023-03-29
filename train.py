@@ -79,7 +79,7 @@ input_shape = (wlen, 1)
 out_dim = class_lay[0]
 from model import getModel
 
-model = getModel(input_shape, out_dim)
+model = get_model(input_shape, out_dim)
 optimizer = RMSprop(lr=lr, rho=0.9, epsilon=1e-8)
 model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics = ['accuracy'])
 
